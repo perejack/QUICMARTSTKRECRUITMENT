@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 
                 if (data.success && data.payment) {
-                    if (data.payment.status === 'SUCCESS') {
+                    if (data.payment.status === 'success' || data.payment.status === 'SUCCESS') {
                         // Stop polling
                         clearInterval(pollInterval);
                         
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             // Show popup ad after 3 seconds
                             surveyAdManager.showPopupAd(3000, 1);
                         }, 1500);
-                    } else if (data.payment.status === 'FAILED') {
+                    } else if (data.payment.status === 'failed' || data.payment.status === 'FAILED') {
                         // Stop polling
                         clearInterval(pollInterval);
                         
