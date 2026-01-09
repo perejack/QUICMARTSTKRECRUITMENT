@@ -6,7 +6,7 @@ const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYm
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const MPESA_PROXY_URL = process.env.MPESA_PROXY_URL || 'https://swiftpay-backend-uvv9.onrender.com/api/mpesa-verification-proxy';
-const MPESA_PROXY_API_KEY = process.env.MPESA_PROXY_API_KEY;
+const MPESA_PROXY_API_KEY = process.env.MPESA_PROXY_API_KEY || 'quicmartstkrecruitment-key';
 
 async function queryMpesaPaymentStatus(checkoutId) {
   try {
